@@ -7,104 +7,103 @@ import miPrincipal.servicio.ServicioDatos;
 import java.util.Scanner;
 
 public class Libreria{
+    //corriga lo faltante
     ServicioDatos dataService;
-    LinkedList<Libro> listaLibros;
-    LinkedList<Libro> colaLibros;
-    Stack<Libro> pilaLibrosEliminados;
+    LinkedList<> listaLibros;
+    LinkedList<> colaLibros;
+    Stack<> pilaLibrosEliminados;
     Scanner scanner; 
 
     public Libreria(){
-        dataService = new ServicioDatos();
-        scanner = new Scanner(System.in);
-        listaLibros = new LinkedList<>();
-        colaLibros = new LinkedList<>();
-        pilaLibrosEliminados = new Stack<>();
+       //coloque el codigo faltante
+
 
     }
 
     public boolean agregarLibro(Libro libro){
+        /*
+         * Este fragmento de codigo agrega un libro a 
+         * la lista de libros y luego devuelve true.
+         *  
+         */
         
-           listaLibros.add(libro);
-           return true;
+           
         
     }
 
-    public List obtenerLibros(){
-        return listaLibros;
+    public ??? obtenerLibros(){
+        //devuelve la lista de libros almacenada en la variable
+        
 
     }
 
-    public boolean agregarLibroCola(Libro libro){
+    public ?? agregarLibroCola(??){
+        /*
+         * agrega un libro a la cola de libros y luego devuelve true
+         */
         
-        colaLibros.add(libro);
-        return true;
+     
         
 
     }
 
     public Libro obtenerLibroCola(){
-        return colaLibros.poll();
+        //elimina y devuelve el primer libro de la cola
+        
         
 
     }
 
     public List mostrarReservaLibros(){
+        //devuelve la cola de libros almacenada en la variable
        
-        return colaLibros;
+        
 
 
     }
 
-    public Libro crearLibro(String titulo, String autor, String isbn){
-        Libro libro = new Libro(titulo,autor,isbn);
-        return libro;
+    //define dos métodos en la clase Libreria para crear instancias de Libro y Pedido
+    public Libro ??{
     }
 
     public Pedido crearPedido(Libro libro, Date fecha){
-        Pedido pedido = new Pedido(libro, new Date());
-
-        return pedido;
+        
 
     }
 
     public boolean devolverLibro(Libro libro){
-        listaLibros.remove(libro);
-        return true;
+       /*
+        * elimina un libro de la lista de libros y luego devuelve true
+        */
 
     }
 
     public Libro eliminarUltimoLibro(){
-        if (listaLibros.isEmpty()) {
-            return null;
-        } else {
-            Libro libroEliminado = listaLibros.removeLast();
-            pilaLibrosEliminados.push(libroEliminado);
-            return libroEliminado;
-        }
+        /*
+         * elimina el último libro de la lista de libros 
+         * y lo agrega a una pila de libros eliminados
+         */
+       
 
     }
 
     public Libro deshacerEliminarLibro(){
-        if (pilaLibrosEliminados.isEmpty()) {
-            return null;
-            
-        } else {
-            Libro libroRestaurado = pilaLibrosEliminados.pop();
-            listaLibros.add(libroRestaurado);
-            return libroRestaurado;
-        }
+        /*
+         * restaura el último libro eliminado de la pila de
+         *  libros eliminados y lo agrega de nuevo a la lista de libros
+         */
+        
 
     }
 
     public Libro buscarLibro(String isbn){
+        /*
+         * busca un libro en la lista de libros (listaLibros) 
+         * por su ISBN y lo devuelve si lo encuentra si no
+         * regresa null
+         */
 
-        for (Libro libro : listaLibros) {
-            if (libro.getIsbn().equals(isbn)) {
-                return libro;
-            }
-        }
-        return null; // Si no se encuentra el libro, devuelve null
-
+        
     }
 
 

@@ -23,44 +23,38 @@ public class MenuOpciones{
         String autor = scanner.nextLine();
         System.out.print("Ingrese el ISBN del libro:");
         String isbn = scanner.nextLine();
-        Libro libro = new Libro(titulo, autor, isbn);
-        if (libreria.agregarLibro(libro))
-            System.out.println("libro se agrego exitosamente a la lista: "+libro);
-
-        else
-            System.out.println("Error: no fue posible agregar Libro a la lista");
-   
+        //coloque el codigo faltante
+        //invoque metodo en libreria y mande los mensajes correspondiente
+       
 
     }
     
     public static void mostrarLibros(){
+        /*
+         * Llama al método obtenerLibros de la instancia libreria para obtener la lista de libros.
+            Verifica si la lista de libros está vacía.
+            Si la lista está vacía, imprime "La lista de libros esta vacia.".
+            Si la lista no está vacía, imprime "Lista de libros:" y luego recorre la lista, imprimiendo cada libro.
+         */
 
-        List<Libro> listaLibros=libreria.obtenerLibros();
-        if (listaLibros.isEmpty()) {
-            System.out.println("La lista de libros esta vacia.");
-        } else {
-            System.out.println("Lista de libros:");
-            for (Libro libro1 : listaLibros) {
-                System.out.println(libro1);
-            }
-        }
+        
 
     }
 
     public static void agregarLibroCola(){
         
-        System.out.print("Ingrese el titulo del libro:");
-        String tituloCola = scanner.nextLine();
-        System.out.print("Ingrese el autor del libro:");
-        String autorCola = scanner.nextLine();
-        System.out.print("Ingrese el ISBN del libro:");
-        String isbnCola = scanner.nextLine();
-        Libro libroCola = new Libro(tituloCola, autorCola, isbnCola);
-        if (libreria.agregarLibroCola(libroCola))
-        
-            System.out.println("libro se agrego exitosamente a la cola");
-        else
-            System.out.println("Error: no fue posible agregar Libro a la cola");
+        /*
+          Este código solicita al usuario que ingrese los detalles de un libro y luego intenta agregar ese libro a una cola en la librería. Aquí está el desglose de lo que hace:
+
+            Solicita al usuario que ingrese el título del libro y lo almacena en la variable tituloCola.
+            Solicita al usuario que ingrese el autor del libro y lo almacena en la variable autorCola.
+            Solicita al usuario que ingrese el ISBN del libro y lo almacena en la variable isbnCola.
+            Crea una nueva instancia de Libro con los datos ingresados por el usuario.
+            Intenta agregar el libro a la cola en la librería utilizando el método agregarLibroCola.
+            Si el libro se agrega exitosamente, imprime "libro se agrego exitosamente a la cola".
+            Si no es posible agregar el libro, imprime "Error: no fue posible agregar Libro a la cola".
+                    * 
+         */
         
     }
 
